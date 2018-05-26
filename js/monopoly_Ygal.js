@@ -328,6 +328,8 @@ Monopoly.handleAction = function (player, action, amount) {
     switch (action) {
         case "move":
             Monopoly.movePlayer(player, amount);
+            var displayScore = $(".scoreBoard");
+            $(displayScore).text(player.attr("title"));
             break;
         case "pay":
             Monopoly.updatePlayersMoney(player, amount);
